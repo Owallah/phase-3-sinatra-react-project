@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_07_113729) do
+ActiveRecord::Schema.define(version: 2023_06_07_183322) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "country_of_origin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "avatar_url"
   end
 
   create_table "arts", force: :cascade do |t|
@@ -27,6 +28,8 @@ ActiveRecord::Schema.define(version: 2023_06_07_113729) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_url"
     t.string "description"
+    t.integer "likes"
+    t.integer "dislikes"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -42,6 +45,7 @@ ActiveRecord::Schema.define(version: 2023_06_07_113729) do
     t.string "country_of_origin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "profile_pic_url"
   end
 
 end
